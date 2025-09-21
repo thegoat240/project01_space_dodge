@@ -6,8 +6,15 @@ pygame.font.init()
 WIDTH, HEIGHT = 1000, 800
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Space Dodge")
+# Define background color (RGB format, e.g., light blue)
+background_color = (100, 149, 237)  # cornflower blue
+WIN.fill(background_color)
 
-BG = pygame.transform.scale(pygame.image.load("bg.jpeg"), (WIDTH, HEIGHT))
+# Update the display
+pygame.display.flip()
+time.sleep(10)
+
+BG = pygame.transform.scale(pygame.image.load("./resources/bg.jpeg"), (WIDTH, HEIGHT))
 
 PLAYER_WIDTH = 40
 PLAYER_HEIGHT = 60
