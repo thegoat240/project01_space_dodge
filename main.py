@@ -68,10 +68,12 @@ def main():
                 run = False
                 break
 
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT] and player.x - PLAYER_VEL >= 0:
+        buttons = pygame.mouse.get_pressed()
+        pos = pygame.mouse.get_pos()
+
+        if pos[0] <player.x and player.x - PLAYER_VEL  >= 0 and buttons[0]:
             player.x -= PLAYER_VEL
-        if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH:
+        if pos[0] >player.x and player.x + PLAYER_VEL + player.width <= WIDTH and buttons[0]:
             player.x += PLAYER_VEL
 
         for star in stars[:]:
