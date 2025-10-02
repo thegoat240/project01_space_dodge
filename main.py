@@ -3,7 +3,7 @@ import time
 import random
 pygame.font.init()
 
-WIDTH, HEIGHT = 400, 200
+WIDTH, HEIGHT = 600, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Space Dodge")
 # Define background color (RGB format, e.g., light blue)
@@ -16,13 +16,13 @@ time.sleep(10)
 
 BG = pygame.transform.scale(pygame.image.load("./resources/bg.jpeg"), (WIDTH, HEIGHT))
 
-PLAYER_WIDTH = 5
-PLAYER_HEIGHT = 5
+PLAYER_WIDTH = 2
+PLAYER_HEIGHT = 2
 
-PLAYER_VEL = 5
-STAR_WIDTH = 5
-STAR_HEIGHT = 10
-STAR_VEL = 3
+PLAYER_VEL = 15
+STAR_WIDTH = 3
+STAR_HEIGHT = 3
+STAR_VEL = 10
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
