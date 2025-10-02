@@ -16,8 +16,8 @@ time.sleep(10)
 
 BG = pygame.transform.scale(pygame.image.load("./resources/bg.jpeg"), (WIDTH, HEIGHT))
 
-PLAYER_WIDTH = 10
-PLAYER_HEIGHT = 50
+PLAYER_WIDTH = 5
+PLAYER_HEIGHT = 5
 
 PLAYER_VEL = 5
 STAR_WIDTH = 5
@@ -76,10 +76,13 @@ def main():
                 break
 
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT] and player.x - PLAYER_VEL >= 0:
-            player.x -= PLAYER_VEL
-        if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH:
-            player.x += PLAYER_VEL
+        buttons = pygame.mouse.get_pressed()
+        pos = pygame.mouse.get_pos()
+
+        if buttons[0] and pos[0] < player.x and  player.x - PLAYER_VEL >= 0:
+            player.x = player.x- PLAYER_VEL
+        if buttons[0] and pos[0] > player.x and player.x + PLAYER_VEL + player.width <= WIDTH:
+            player.x = player.x + PLAYER_VEL
 
         for star in stars[:]:
             star.y += STAR_VEL
