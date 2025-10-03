@@ -16,13 +16,13 @@ time.sleep(10)
 
 BG = pygame.transform.scale(pygame.image.load("./resources/bg.jpeg"), (WIDTH, HEIGHT))
 
-PLAYER_WIDTH = 2
-PLAYER_HEIGHT = 2
+PLAYER_WIDTH = 4
+PLAYER_HEIGHT = 4
 
 PLAYER_VEL = 15
-STAR_WIDTH = 3
-STAR_HEIGHT = 3
-STAR_VEL = 10
+STAR_WIDTH = 2
+STAR_HEIGHT = 2
+STAR_VEL = 5
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
