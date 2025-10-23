@@ -12,7 +12,7 @@ BG = pygame.transform.scale(pygame.image.load("bg.jpeg"), (WIDTH, HEIGHT))
 PLAYER_WIDTH = 10
 PLAYER_HEIGHT = 20
 
-PLAYER_VEL = 100
+PLAYER_VEL = 67
 STAR_WIDTH = 10
 STAR_HEIGHT = 10
 STAR_VEL = 3
